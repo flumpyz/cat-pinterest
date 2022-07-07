@@ -1,0 +1,1 @@
+export const API = "https://api.thecatapi.com/v1";

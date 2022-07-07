@@ -7,5 +7,7 @@ export const Gallery = styled.main`
   width: 100vw;
   height: calc(100vh - 64px - 52px);
   
-  margin-top: 52px;
+  padding-top: 52px;
+  
+  background-color: #FFFFFF;
 `
