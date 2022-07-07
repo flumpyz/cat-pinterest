@@ -8,13 +8,13 @@ export const Header = styled.header`
   height: 64px;
 
   background-color: #2196F3;
-`
+`;
 
 export const Nav = styled.nav`
   display: flex;
 
   height: 100%;
-`
+`;
 
 export const Link = styled.a`
   display: flex;
@@ -40,4 +40,4 @@ export const Link = styled.a`
 
     color: rgba(255, 255, 255, 1);
   }
-`
+`;
