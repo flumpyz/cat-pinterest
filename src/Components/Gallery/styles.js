@@ -10,4 +10,4 @@ export const Gallery = styled.main`
   padding-top: 52px;
   
   background-color: #FFFFFF;
-`
+`;

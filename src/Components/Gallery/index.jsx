@@ -2,8 +2,6 @@ import React, {useEffect, useState} from 'react';
 import * as SC from './styles';
 import * as WC from '../../UIComponents/Wrapper/wrappers';
 import GalleryCard from "../GalleryCard";
-import {API} from "../../Constants/API";
-import useSWR from 'swr';
 
 const Index = (props) => {
     const catCards = props.catValues.map((catValue) => (

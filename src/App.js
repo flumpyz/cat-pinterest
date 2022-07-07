@@ -3,8 +3,9 @@ import './App.css';
 import Header from "./Components/Header";
 import Gallery from "./Components/Gallery";
 import {API} from "./Constants/API";
-import {useEffect, useState} from "react";
+import {useEffect, useLayoutEffect, useState} from "react";
 import useSWR from "swr";
+import Loader from "./UIComponents/Loader";
 
 const url = `${API}/images/search?limit=15&order=RANDOM`;
 
@@ -21,22 +22,28 @@ const getData = async () => {
 
 function App() {
     const [catValues, setCatValues] = useState([]);
-
-    const {data, error} = useSWR(url, getData);
+    const [isLoading, setIsLoading] = useState(false);
+    const [isError, setIsError] = useState(false);
 
     useEffect(() => {
-        if (data) {
-            setCatValues(data);
-            console.log(data);
-        }
-    }, [data, error])
+        setIsLoading(true);
+        getData().then((response) => {
+            setCatValues(response);
+            console.log(response);
+        }).catch((error) => {
+            setIsError(true);
+        }).finally(() => {
+            setIsLoading(false);
+        })
+    }, [])
 
     return (
         <div className="App">
             <Header/>
-            {data &&
-                <Gallery catValues={catValues}/>
+            {isLoading &&
+                <Loader/>
             }
+            <Gallery catValues={catValues}/>
         </div>
     );
 }
