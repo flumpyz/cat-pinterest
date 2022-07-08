@@ -8,8 +8,6 @@ export const LikeButton = styled.button`
   right: 24px;
   display: none;
 
-  transition: all 0.3s;
-
   & svg {
     fill: #F24E1E;
 

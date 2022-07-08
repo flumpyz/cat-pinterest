@@ -24,8 +24,9 @@ export const GalleryCardImage = styled.img`
 
 export const GalleryCardLikeButton = styled(LikeButton)`
   position: absolute;
+  
   top: 50%;
   left: 50%;
+  
   transform: translate(-50%, -50%);
-
-`
+`;
