@@ -4,7 +4,7 @@ import Gallery from "./Components/Gallery";
 import {API} from "./Constants/API";
 import {useEffect, useState} from "react";
 import Loader from "./UIComponents/Loader";
-import {getData} from "./Services/APIFetch";
+import {getData} from "./Services/APIFetchService";
 
 const url = `${API}/images/search?limit=15&order=RANDOM`;
 
