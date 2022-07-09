@@ -25,10 +25,12 @@ export const Link = styled(NavLink)`
   padding-right: 23px;
   padding-left: 23px;
   
+  background-color: ${props => props.isActive ? "#1E88E5" : "parent" };
+  color: ${props => props.isActive ? "rgba(255, 255, 255, 1)" : "rgba(255, 255, 255, 0.7)" };
+  
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 400;
-  color: rgba(255, 255, 255, 0.7);
   letter-spacing: 0.25px;
   line-height: 21px;
   text-decoration: none;
@@ -38,8 +40,6 @@ export const Link = styled(NavLink)`
   transition: 0.35s ease-in;
   
   &:hover {
-    background-color: #1E88E5;
-
-    color: rgba(255, 255, 255, 1);
+    background-color: #42A5F5;
   }
 `;

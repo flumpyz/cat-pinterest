@@ -6,7 +6,7 @@ import Gallery from "../../Components/Gallery";
 const Index = (props) => {
     return (
         <div>
-            <Header/>
+            <Header isActive={props.isActive}/>
             {props.isLoading &&
                 <Loader/>
             }

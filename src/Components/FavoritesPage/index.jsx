@@ -7,7 +7,7 @@ const Index = () => {
     const catValues = useSelector(state => state.catsInfo);
 
     return (
-        <MainLayout isLoading={false} catValues={catValues}/>
+        <MainLayout isActive={[false, true]} isLoading={false} catValues={catValues}/>
     );
 };
 

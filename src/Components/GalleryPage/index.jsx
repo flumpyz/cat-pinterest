@@ -27,7 +27,7 @@ const Index = (props) => {
     }, [])
 
     return (
-        <MainLayout isLoading={isLoading} catValues={catValues}/>
+        <MainLayout isActive={[true, false]} isLoading={isLoading} catValues={catValues}/>
     );
 };
 
