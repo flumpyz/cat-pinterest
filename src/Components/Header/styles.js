@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { NavLink } from "react-router-dom";
 
 export const Header = styled.header`
   display: flex;
@@ -16,7 +17,7 @@ export const Nav = styled.nav`
   height: 100%;
 `;
 
-export const Link = styled.a`
+export const Link = styled(NavLink)`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -30,6 +31,7 @@ export const Link = styled.a`
   color: rgba(255, 255, 255, 0.7);
   letter-spacing: 0.25px;
   line-height: 21px;
+  text-decoration: none;
   
   cursor: pointer;
   

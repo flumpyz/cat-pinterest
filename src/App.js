@@ -1,37 +1,15 @@
 import './App.css';
-import Header from "./Components/Header";
-import Gallery from "./Components/Gallery";
-import {API} from "./Constants/API";
-import {useEffect, useState} from "react";
-import Loader from "./UIComponents/Loader";
-import {getData} from "./Services/APIFetchService";
-
-const url = `${API}/images/search?limit=15&order=RANDOM`;
+import {Route, Routes} from "react-router";
+import GalleryPage from "./Components/GalleryPage";
+import FavoritesPage from "./Components/FavoritesPage";
 
 function App() {
-    const [catValues, setCatValues] = useState([]);
-    const [isLoading, setIsLoading] = useState(false);
-    const [isError, setIsError] = useState(false);
-
-    useEffect(() => {
-        setIsLoading(true);
-        getData(url).then((response) => {
-            setCatValues(response);
-            console.log(response);
-        }).catch((error) => {
-            setIsError(true);
-        }).finally(() => {
-            setIsLoading(false);
-        })
-    }, [])
-
     return (
-        <div className="App">
-            <Header/>
-            {isLoading &&
-                <Loader/>
-            }
-            <Gallery catValues={catValues}/>
+        <div>
+            <Routes>
+                <Route exact path="/" element={<GalleryPage />} />
+                <Route exact path="/favorite-cats"  element={<FavoritesPage />}/>
+            </Routes>
         </div>
     );
 }

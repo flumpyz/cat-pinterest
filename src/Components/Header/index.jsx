@@ -7,8 +7,8 @@ const Index = () => {
         <SC.Header>
             <WC.MainWrapper>
                 <SC.Nav>
-                    <SC.Link>Все котики</SC.Link>
-                    <SC.Link>Любимые котики</SC.Link>
+                    <SC.Link to="/">Все котики</SC.Link>
+                    <SC.Link to="/favorite-cats">Любимые котики</SC.Link>
                 </SC.Nav>
             </WC.MainWrapper>
         </SC.Header>
