@@ -7,7 +7,7 @@ const initialState = {
 export function catsReducer(state = initialState, action) {
     switch (action.type) {
         case (CAT_SET_INFO):
-            state.catsInfo.push(action.payload.catInfo);
+            state.catsInfo.push(action.payload);
             return {...state, catsInfo: state.catsInfo}
         case (CATS_GET_INFO):
             return {...state};
