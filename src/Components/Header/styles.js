@@ -10,7 +10,7 @@ export const Header = styled.header`
 
   background-color: #2196F3;
 
-  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.24);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.24);
 `;
 
 export const Nav = styled.nav`
