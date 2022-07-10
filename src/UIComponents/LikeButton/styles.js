@@ -6,7 +6,7 @@ export const LikeButton = styled.button`
   position: absolute;
   bottom: 24px;
   right: 24px;
-  display: none;
+  display: ${props => props.isFavorite ? "block" : "none"};
 
   & svg {
     fill: #F24E1E;

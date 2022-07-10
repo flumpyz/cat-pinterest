@@ -11,7 +11,21 @@ const Index = (props) => {
     const [isLoading, setIsLoading] = useState(false);
     const [isError, setIsError] = useState(false);
 
-    const updateMock = () => {
+    const updateMock = (favoriteCatValues) => {
+        setCatValues(catValues);
+    }
+
+    const loadMoreData = () => {
+        setIsLoading(true);
+        getData(url).then((response) => {
+            setCatValues([...catValues, ...response]);
+            console.log(response);
+            console.log(catValues);
+        }).catch((error) => {
+            setIsError(true);
+        }).finally(() => {
+            setIsLoading(false);
+        })
     }
 
     useEffect(() => {
@@ -23,11 +37,12 @@ const Index = (props) => {
             setIsError(true);
         }).finally(() => {
             setIsLoading(false);
-        })
+        });
     }, [])
 
     return (
-        <MainLayout isActive={[true, false]} isLoading={isLoading} catValues={catValues} onChangeCatValuesHandler={updateMock}/>
+        <MainLayout isActive={[true, false]} isLoading={isLoading} catValues={catValues}
+                    onChangeCatValuesHandler={updateMock} isGalleryPage loadMoreData={loadMoreData}/>
     );
 };
 

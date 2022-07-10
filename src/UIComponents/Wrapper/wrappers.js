@@ -12,5 +12,6 @@ export const GalleryWrapper = styled.div`
   grid-template-rows: repeat(auto-fill, 225px);
 
   width: 100%;
-  height: 100%;
+
+  margin-bottom: 48px;
 `;
