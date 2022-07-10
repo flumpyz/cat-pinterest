@@ -9,7 +9,6 @@ export function catsReducer(state = initialState, action) {
     switch (action.type) {
         case (CAT_SET_INFO):
             const favorite = Array.prototype.concat(getFavoriteCatValues(), action.payload);
-            console.log(favorite);
             setFavoriteCatValues(favorite);
             state.catsInfo = getFavoriteCatValues();
             return {...state, catsInfo: state.catsInfo}

@@ -2,7 +2,8 @@ import React from 'react';
 
 const Loader = () => {
     return (
-        <svg style={{margin: "auto", background: "rgb(255, 255, 255)", display: "block", shapeRendering: "auto"}} width="200px"
+        <svg style={{margin: "auto", background: "rgb(255, 255, 255)", display: "block", shapeRendering: "auto"}}
+             width="200px"
              height="200px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
             <g>
                 <animateTransform attributeName="transform" type="rotate" values="360 50 50;0 50 50" keyTimes="0;1"

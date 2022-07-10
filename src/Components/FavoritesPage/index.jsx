@@ -1,16 +1,20 @@
 import React, {useState} from 'react';
 import MainLayout from "../../UIComponents/MainLayout";
-import {getFavoriteCatValues} from "../../Services/localStorageService";
+import {useSelector} from "react-redux";
 
 const Index = () => {
-    const [catValues, setCatValues] = useState(getFavoriteCatValues() ?? []);
+    const favoriteCatValues = useSelector(state => state.catsInfo);
+    const [catValues, setCatValues] = useState(favoriteCatValues ?? []);
 
     const setCatValuesHandler = (catValues) => {
         setCatValues(catValues);
     }
 
     return (
-        <MainLayout isActive={[false, true]} isLoading={false} catValues={catValues} onChangeCatValuesHandler={setCatValuesHandler}/>
+        <MainLayout isActive={[false, true]}
+                    isLoading={false}
+                    catValues={catValues}
+                    onChangeCatValuesHandler={setCatValuesHandler}/>
     );
 };
 

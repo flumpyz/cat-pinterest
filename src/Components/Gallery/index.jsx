@@ -5,7 +5,8 @@ import GalleryCard from "../GalleryCard";
 
 const Index = (props) => {
     const catCards = props.catValues.map((catValue) => (
-        <GalleryCard src={catValue.url} onChangeCatValuesHandler={props.onChangeCatValuesHandler}>
+        <GalleryCard src={catValue.url}
+                     onChangeCatValuesHandler={props.onChangeCatValuesHandler}>
         </GalleryCard>
     ))
 

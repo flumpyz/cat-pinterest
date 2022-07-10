@@ -19,8 +19,6 @@ const Index = (props) => {
         setIsLoading(true);
         getData(url).then((response) => {
             setCatValues([...catValues, ...response]);
-            console.log(response);
-            console.log(catValues);
         }).catch((error) => {
             setIsError(true);
         }).finally(() => {
@@ -32,7 +30,6 @@ const Index = (props) => {
         setIsLoading(true);
         getData(url).then((response) => {
             setCatValues(response);
-            console.log(response);
         }).catch((error) => {
             setIsError(true);
         }).finally(() => {

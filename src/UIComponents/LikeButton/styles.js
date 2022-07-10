@@ -1,12 +1,16 @@
 import styled from "styled-components";
 
 export const LikeButton = styled.button`
-  border: none;
-  background: rgba(255, 255, 255, 0);
   position: absolute;
+  
+  display: ${props => props.isFavorite ? "block" : "none"};
+
   bottom: 24px;
   right: 24px;
-  display: ${props => props.isFavorite ? "block" : "none"};
+  
+  border: none;
+  
+  background: rgba(255, 255, 255, 0);
 
   & svg {
     fill: #F24E1E;
