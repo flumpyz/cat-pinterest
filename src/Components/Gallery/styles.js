@@ -5,9 +5,9 @@ export const Gallery = styled.main`
   justify-content: center;
 
   width: 100vw;
-  height: calc(100vh - 64px - 52px);
+  height: auto;
 
-  padding-top: 52px;
+  margin-top: 52px;
 
   background-color: #FFFFFF;
 `;
