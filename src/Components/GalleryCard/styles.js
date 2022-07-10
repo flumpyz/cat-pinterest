@@ -14,6 +14,8 @@ export const GalleryCard = styled.div`
 
   &:hover {
     transform: scale(1.14);
+
+    box-shadow: 0 6px 5px rgba(0, 0, 0, 0.24), 0 9px 18px rgba(0, 0, 0, 0.18);
   }
   
   &:hover button {
