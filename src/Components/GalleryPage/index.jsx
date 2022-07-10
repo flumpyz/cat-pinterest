@@ -11,7 +11,8 @@ const Index = (props) => {
     const [isLoading, setIsLoading] = useState(false);
     const [isError, setIsError] = useState(false);
 
-    const updateMock = () => {
+    const updateMock = (favoriteCatValues) => {
+        setCatValues(catValues);
     }
 
     useEffect(() => {

@@ -5,6 +5,9 @@ export const GalleryCard = styled.div`
   position: relative;
 
   transition: 0.35s ease-in;
+  
+  & button {
+  }
 
   &:hover {
     transform: scale(1.14);
