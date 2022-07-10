@@ -13,7 +13,6 @@ export const Gallery = styled.main`
 `;
 
 export const LoadMoreBlock = styled.div`
-  margin-top: 48px;
   padding-bottom: 31px;
 
   font-family: 'Roboto', sans-serif;

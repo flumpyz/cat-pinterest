@@ -10,7 +10,8 @@ const Index = (props) => {
             <Header isActive={props.isActive}/>
             <Gallery catValues={props.catValues}
                      onChangeCatValuesHandler={props.onChangeCatValuesHandler}
-                     loadMoreData={props.loadMoreData}/>
+                     loadMoreData={props.loadMoreData}
+                     isGalleryPage={props.isGalleryPage}/>
             {props.isLoading &&
                 <Loader/>
             }
