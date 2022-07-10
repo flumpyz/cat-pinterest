@@ -17,7 +17,7 @@ export function catsReducer(state = initialState, action) {
             return {...state};
         case (CAT_DELETE_INFO):
             state.catsInfo = getFavoriteCatValues();
-            const index = state.catsInfo.findIndex(favoriteCat => favoriteCat.url === action.payload.url);
+            const index = state.catsInfo.findIndex(favoriteCat => favoriteCat?.url === action.payload.url);
             state.catsInfo.splice(index, 1);
             setFavoriteCatValues(state.catsInfo);
             return {...state, catsInfo: state.catsInfo}

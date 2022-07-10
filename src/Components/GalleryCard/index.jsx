@@ -7,10 +7,10 @@ import {getFavoriteCatValues} from "../../Services/localStorageService";
 const Index = (props) => {
     const dispatch = useDispatch();
     const favoriteCatValues = useSelector(state => state.catsInfo) ?? [];
-    const [isFavorite, setIsFavorite] = useState(favoriteCatValues.find(favoriteCat => favoriteCat.url === props.src) !== undefined);
+    const [isFavorite, setIsFavorite] = useState(favoriteCatValues.find(favoriteCat => favoriteCat?.url === props.src) !== undefined);
 
     const clickHandler = () => {
-        let favorite = favoriteCatValues.find(favoriteCat => favoriteCat.url === props.src);
+        let favorite = favoriteCatValues.find(favoriteCat => favoriteCat?.url === props.src);
         if (favorite === undefined) {
             dispatch({type: CAT_SET_INFO, payload: {url: props.src}});
             setIsFavorite(true);
