@@ -3,6 +3,9 @@ import LikeButton from "../../UIComponents/LikeButton";
 
 export const GalleryCard = styled.div`
   position: relative;
+  
+  width: 225px;
+  height: 225px;
 
   transition: 0.35s ease-in;
   

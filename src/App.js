@@ -2,6 +2,7 @@ import './App.css';
 import {Route, Routes} from "react-router";
 import GalleryPage from "./Components/GalleryPage";
 import FavoritesPage from "./Components/FavoritesPage";
+import './reset.css';
 
 function App() {
     return (

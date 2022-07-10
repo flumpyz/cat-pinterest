@@ -15,6 +15,9 @@ const Index = (props) => {
                 <WC.GalleryWrapper>
                     {catCards}
                 </WC.GalleryWrapper>
+                <SC.LoadMoreBlock onClick={props.loadMoreData}>
+                    ... загружаем еще котиков ...
+                </SC.LoadMoreBlock>
             </WC.MainWrapper>
         </SC.Gallery>
     );

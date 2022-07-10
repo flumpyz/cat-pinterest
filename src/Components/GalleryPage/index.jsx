@@ -15,6 +15,19 @@ const Index = (props) => {
         setCatValues(catValues);
     }
 
+    const loadMoreData = () => {
+        setIsLoading(true);
+        getData(url).then((response) => {
+            setCatValues([...catValues, ...response]);
+            console.log(response);
+            console.log(catValues);
+        }).catch((error) => {
+            setIsError(true);
+        }).finally(() => {
+            setIsLoading(false);
+        })
+    }
+
     useEffect(() => {
         setIsLoading(true);
         getData(url).then((response) => {
@@ -24,11 +37,12 @@ const Index = (props) => {
             setIsError(true);
         }).finally(() => {
             setIsLoading(false);
-        })
+        });
     }, [])
 
     return (
-        <MainLayout isActive={[true, false]} isLoading={isLoading} catValues={catValues} onChangeCatValuesHandler={updateMock}/>
+        <MainLayout isActive={[true, false]} isLoading={isLoading} catValues={catValues}
+                    onChangeCatValuesHandler={updateMock} isGalleryPage loadMoreData={loadMoreData}/>
     );
 };
 
