@@ -1,7 +1,4 @@
 import React from 'react';
-import Header from "../Header";
-import Loader from "../../UIComponents/Loader";
-import Gallery from "../Gallery";
 import {useEffect, useState} from "react";
 import {getData} from "../../Services/APIFetchService";
 import {API} from "../../Constants/API";
@@ -13,6 +10,9 @@ const Index = (props) => {
     const [catValues, setCatValues] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
     const [isError, setIsError] = useState(false);
+
+    const updateMock = () => {
+    }
 
     useEffect(() => {
         setIsLoading(true);
@@ -27,7 +27,7 @@ const Index = (props) => {
     }, [])
 
     return (
-        <MainLayout isActive={[true, false]} isLoading={isLoading} catValues={catValues}/>
+        <MainLayout isActive={[true, false]} isLoading={isLoading} catValues={catValues} onChangeCatValuesHandler={updateMock}/>
     );
 };
 
