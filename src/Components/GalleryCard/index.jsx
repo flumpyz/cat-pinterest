@@ -1,20 +1,25 @@
 import React from 'react';
 import * as SC from './styles';
-import {useDispatch, useSelector} from "react-redux";
-import {CAT_SET_INFO} from "../../Actions/catsActions";
+import {useDispatch} from "react-redux";
+import {CAT_DELETE_INFO, CAT_SET_INFO} from "../../Actions/catsActions";
+import {getFavoriteCatValues} from "../../Services/localStorageService";
 
 const Index = (props) => {
     const dispatch = useDispatch();
-    const catValues = useSelector(state => state.catsInfo);
+    const favoriteCatValues = getFavoriteCatValues() ?? [];
 
-    const addFavoriteCat = () => {
-        dispatch({type: CAT_SET_INFO, payload: {url: props.src}})
+    const clickHandler = () => {
+        let favorite = favoriteCatValues.find(favoriteCat => favoriteCat.url === props.src);
+        favorite === undefined
+            ? dispatch({type: CAT_SET_INFO, payload: {url: props.src}})
+            : dispatch({type: CAT_DELETE_INFO, payload: {url: props.src}});
+        props.onChangeCatValuesHandler(getFavoriteCatValues());
     }
 
     return (
         <SC.GalleryCard>
             <SC.GalleryCardImage src={props.src}/>
-            <SC.GalleryCardLikeButton clickHandler={addFavoriteCat}/>
+            <SC.GalleryCardLikeButton clickHandler={clickHandler}/>
         </SC.GalleryCard>
     );
 };

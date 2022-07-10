@@ -26,7 +26,6 @@ export const Link = styled(NavLink)`
   padding-left: 23px;
   
   background-color: ${props => props.isActive ? "#1E88E5" : "parent" };
-  color: ${props => props.isActive ? "rgba(255, 255, 255, 1)" : "rgba(255, 255, 255, 0.7)" };
   
   font-family: "Roboto", sans-serif;
   font-style: normal;
@@ -34,6 +33,7 @@ export const Link = styled(NavLink)`
   letter-spacing: 0.25px;
   line-height: 21px;
   text-decoration: none;
+  color: ${props => props.isActive ? "rgba(255, 255, 255, 1)" : "rgba(255, 255, 255, 0.7)" };
   
   cursor: pointer;
   

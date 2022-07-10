@@ -10,7 +10,7 @@ const Index = (props) => {
             {props.isLoading &&
                 <Loader/>
             }
-            <Gallery catValues={props.catValues}/>
+            <Gallery catValues={props.catValues} onChangeCatValuesHandler={props.onChangeCatValuesHandler}/>
         </div>
     );
 };

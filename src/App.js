@@ -7,8 +7,8 @@ function App() {
     return (
         <div>
             <Routes>
-                <Route exact path="/" element={<GalleryPage />} />
-                <Route exact path="/favorite-cats"  element={<FavoritesPage />}/>
+                <Route exact path="/" element={<GalleryPage/>}/>
+                <Route exact path="/favorite-cats" element={<FavoritesPage/>}/>
             </Routes>
         </div>
     );
