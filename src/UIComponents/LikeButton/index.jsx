@@ -3,7 +3,7 @@ import * as SC from './styles';
 
 const Index = (props) => {
     return (
-        <SC.LikeButton>
+        <SC.LikeButton onClick={props.clickHandler}>
             <svg width="48"
                  height="48"
                  viewBox="0 0 48 48"

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { NavLink } from "react-router-dom";
 
 export const Header = styled.header`
   display: flex;
@@ -16,7 +17,7 @@ export const Nav = styled.nav`
   height: 100%;
 `;
 
-export const Link = styled.a`
+export const Link = styled(NavLink)`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -24,20 +25,21 @@ export const Link = styled.a`
   padding-right: 23px;
   padding-left: 23px;
   
+  background-color: ${props => props.isActive ? "#1E88E5" : "parent" };
+  
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 400;
-  color: rgba(255, 255, 255, 0.7);
   letter-spacing: 0.25px;
   line-height: 21px;
+  text-decoration: none;
+  color: ${props => props.isActive ? "rgba(255, 255, 255, 1)" : "rgba(255, 255, 255, 0.7)" };
   
   cursor: pointer;
   
   transition: 0.35s ease-in;
   
   &:hover {
-    background-color: #1E88E5;
-
-    color: rgba(255, 255, 255, 1);
+    background-color: #42A5F5;
   }
 `;
